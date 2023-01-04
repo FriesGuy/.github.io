@@ -3,7 +3,7 @@
   <head>
   <style>
     body {
-  background-color: #489936;
+  background-color: #659965;
 }
   </style>
     <style>
@@ -25,34 +25,36 @@
 </body>
 <body>
   <div>
-  <h2> I love you Serena <style>
+  <h2> I love you Serena </h2>
+  </div>
+  <style>
   .heart {
-    width: 100px;
-    height: 90px;
-    background: red;
+    width: 200px;
+    height: 180px;
+    background: linear-gradient(to right, #ff5e62, #ff9966);
     border-radius: 50%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     transform: rotate(45deg);
   }
   .heart::before,
   .heart::after {
     content: "";
-    background: red;
+    background: inherit;
     border-radius: 25px 25px 0 0;
     position: absolute;
   }
   .heart::before {
-    width: 100px;
-    height: 90px;
-    top: -45px;
+    width: 200px;
+    height: 180px;
+    top: -90px;
   }
   .heart::after {
-    width: 100px;
-    height: 90px;
-    top: 45px;
+    width: 200px;
+    height: 180px;
+    top: 90px;
   }
 </style>
 
-<div class="heart"></div></h2>
-  </div>
+<div class="heart"></div>
 </html>
