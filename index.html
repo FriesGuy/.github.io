@@ -25,6 +25,34 @@
 </body>
 <body>
   <div>
-  <h2> I love you Serena &#x2665;</h2>
+  <h2> I love you Serena <style>
+  .heart {
+    width: 100px;
+    height: 90px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(45deg);
+  }
+  .heart::before,
+  .heart::after {
+    content: "";
+    background: red;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+  }
+  .heart::before {
+    width: 100px;
+    height: 90px;
+    top: -45px;
+  }
+  .heart::after {
+    width: 100px;
+    height: 90px;
+    top: 45px;
+  }
+</style>
+
+<div class="heart"></div></h2>
   </div>
 </html>
