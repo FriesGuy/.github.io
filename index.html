@@ -3,7 +3,7 @@
   <head>
   <style>
     body {
-  background-color: #759985;
+  background-color: #759999;
 }
   </style>
     <style>
@@ -27,33 +27,36 @@
   <div>
   <h2> I love you Serena </h2>
   </div>
-  <style>
-  .heart {
-    width: 200px;
-    height: 180px;
-    background: linear-gradient(to right, #ff5e62, #ff9966);
-    border-radius: 50%;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  .heart::before,
-  .heart::after {
-    content: "";
-    background: inherit;
-    border-radius: 25px 25px 0 0;
-    position: absolute;
-  }
-  .heart::before {
-    width: 200px;
-    height: 180px;
-    top: -90px;
-  }
-  .heart::after {
-    width: 200px;
-    height: 180px;
-    top: 90px;
-  }
-</style>
-
-<div class="heart"></div>
+<head>
+    <style>
+      .heart {
+        width: 200px;
+        height: 180px;
+        background: linear-gradient(to right, #ff5e62, #ff9966);
+        border-radius: 50%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      .heart::before,
+      .heart::after {
+        content: "";
+        background: inherit;
+        border-radius: 25px 25px 0 0;
+        position: absolute;
+      }
+      .heart::before {
+        width: 200px;
+        height: 180px;
+        top: -90px;
+      }
+      .heart::after {
+        width: 200px;
+        height: 180px;
+        top: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart"></div>
+  </body>
 </html>
