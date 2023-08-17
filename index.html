@@ -1,39 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-  <style>
-    body {
-  background-color: #001000;
-}
-    body {
-  color: white;
-}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xavier's Portfolio</title>
     <style>
-  div {
-    text-align: center;
-  }
-</style>
-</head>
-<head>
-  <title>
-    Welcome to my portfolio website. 
-      </title>
-</head>
-<body style="text-align: center;">
-  <h1>
-    Welcome to my portfolio website.
-  </h1>
-  <h3>
-    My name is Xavier McDaid and I will be showcasing all tech projects that I do here.
-  </h3>
-  <h4>
-    I am currently trying to become a data analyst. I am located in the Austin Texas area.
-  </h4>
-  <h4>
-    Before I start, here is a link to my LinkedIn: <a href="https://www.linkedin.com/in/xavier-mcdaid-104707254/">LinkedIn</a>
+      body,
+      h1,
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+      }
+
+      nav {
+        background-color: #444;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 1em;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+
+      footer {
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 1em 0;
+      }
+
+      nav {
+          background-color: #444;
+          display: flex;
+          justify-content: center;
+        }
+
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          padding: 1em;
+          transition: background-color 0.3s; 
+        }
+
+        nav a:hover {
+          background-color: #555; 
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my portfolio</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+      <h2>Xavier's Work</h2>
+      <p>This website is a remake of my old portfolio. Although a little late all work pertaining to the 
+        tech industry will be posted here.
+        <br>
+        This domain will also have different pages you can go to to gather more information. 
+    The page labled about will also have my tech resume added. Before I start, here is a link to my LinkedIn: <a href="https://www.linkedin.com/in/xavier-mcdaid-104707254/">LinkedIn</a>
     You can reach me any time by messaging me on linkedin.
-  </h4>
+        <br>
+        Now here is some work i have done.</p>
+    </div>
   <h3>
     Airbnb Case Study
   </h3>
@@ -45,80 +103,9 @@
   <img src="/.github.io/Untitled presentation (5).jpg" Width="500" Height="300">
   <img src="/.github.io/Untitled presentation (6).jpg" Width="500" Height="300">
   
-<br>
-  <br>
-    <br>
-      <br>
-
-<h1>
-  Calculator!!!(dont have java script running yet.)
-</h1>
-  <head>
-    <style>
-        table {
-            border: 2px solid black;
-            margin-left: auto;
-            margin-right: auto;
-        }
-          
-        input[type="button"] {
-            width: 100%;
-            padding: 20px 40px;
-            background-color: yellow;
-            color: Black;
-            font-size: 24px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-        }
-          
-        input[type="text"] {
-            padding: 20px 30px;
-            font-size: 24px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            border: 2px dark gray;
-        }
-    </style>
-</head>
-  
-<body>
-  
-    <table id="calculator">
-        <tr>
-            <td colspan="3">
-                <input type="text" id="result">
-            </td>
-            <td><input type="button" value="c"></td>
-        </tr>
-  
-        <tr>
-            <td><input type="button" value="1"></td>
-            <td><input type="button" value="2"></td>
-            <td><input type="button" value="3"></td>
-            <td><input type="button" value="/"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="4"></td>
-            <td><input type="button" value="5"></td>
-            <td><input type="button" value="6"></td>
-            <td><input type="button" value="*"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="7"></td>
-            <td><input type="button" value="8"></td>
-            <td><input type="button" value="9"></td>
-            <td><input type="button" value="-"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="0"></td>
-            <td><input type="button" value="."></td>
-            <td><input type="button" value="="></td>
-            <td><input type="button" value="+"></td>
-        </tr>
-    </table>
-</body>
-  
-</body>
+<footer>
+      <p>&copy; Xavier's Portfolio. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
+
