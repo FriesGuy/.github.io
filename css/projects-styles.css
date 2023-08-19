@@ -79,7 +79,7 @@
 }
 
 .calculator.dnd {
-  transform: translateY(40px);
+  transform: translateY(0px);
 
     .image-container2 {
       display: flex;
