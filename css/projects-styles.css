@@ -81,6 +81,20 @@
 .calculator.dnd {
   transform: translateY(0px);
 
+    .calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  margin-top: 20px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.calculator-container.flipped {
+  transform: rotateY(180deg);
+}
+
     .image-container2 {
       display: flex;
       flex-wrap: wrap;
