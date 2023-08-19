@@ -136,8 +136,8 @@ input[type="text"] {
 
 .calculator-container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   perspective: 1000px;
   margin-top: 20px;
 }
@@ -148,41 +148,12 @@ input[type="text"] {
   background-color: #f2f2f2;
   border: 2px solid #333;
   padding: 10px;
-  position: relative; 
-  box-sizing: border-box; 
+  position: relative;
+  box-sizing: border-box;
   transition: transform 0.5s;
 }
 
-.calculator {
-  width: 300px;
-  height: 400px;
-  background-color: #f2f2f2;
-  border: 2px solid #333;
-  padding: 10px;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-}
-
-.calculator.regular {
-  transform: rotateY(0deg);
-  width: 300px;
-  height: 400px;
-}
-
 .calculator.dnd {
-  transform: rotateY(180deg);
-  width: 300px;
-  background-color: #3d2725;
-  color: white;
-}
-
-.flip-button {
-  margin-top: 10px;
-}
-
-.calculator.dnd {
-  width: 300px;
   background-color: #3d2725;
   border: 2px solid #895c4d;
   padding: 10px;
@@ -191,18 +162,18 @@ input[type="text"] {
   font-size: 18px;
 }
 
-.calculator.dnd table {
+.calculator table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
 }
 
-.calculator.dnd td {
+.calculator td {
   padding: 10px;
   border: 1px solid #895c4d;
 }
 
-.calculator.dnd input[type="text"] {
+.calculator input[type="text"] {
   padding: 10px;
   font-size: 18px;
   border: none;
@@ -211,7 +182,7 @@ input[type="text"] {
   color: #fff;
 }
 
-.calculator.dnd input[type="button"] {
+.calculator input[type="button"] {
   width: 100%;
   padding: 10px;
   font-size: 18px;
@@ -222,11 +193,11 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.calculator.dnd input[type="button"]:hover {
+.calculator input[type="button"]:hover {
   background-color: #895c4d;
 }
 
-.calculator.dnd .flip-button {
+.calculator .flip-button {
   margin-top: 10px;
   background-color: #6b463e;
   color: #fff;
@@ -237,8 +208,21 @@ input[type="text"] {
   font-size: 16px;
 }
 
-.calculator.dnd .flip-button:hover {
+.calculator .flip-button:hover {
   background-color: #895c4d;
+}
+
+.calculator.dnd {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.calculator.regular {
+  transform: rotateY(0deg);
+}
+
+.calculator.dnd {
+  transform: rotateY(180deg);
 }
 
 .image-container2 {
