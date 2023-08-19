@@ -71,3 +71,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const flipButtons = document.querySelectorAll(".flip-button");
+    const calculatorContainer = document.querySelector(".calculator-container");
+
+    flipButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        calculatorContainer.classList.toggle("flipped");
+      });
+    });
+  });
