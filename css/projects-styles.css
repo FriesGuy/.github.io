@@ -61,34 +61,6 @@
       background-color: #895c4d;
     }
 
-    .calculator .flip-button {
-      margin-top: 10px;
-      background-color: #6b463e;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    .calculator .flip-button:hover {
-      background-color: #895c4d;
-    }
-
-    .calculator.dnd {
-      transform-style: preserve-3d;
-      transition: transform 0.5s;
-    }
-
-    .calculator.regular {
-      transform: rotateY(0deg);
-    }
-
-    .calculator.dnd {
-      transform: rotateY(180deg);
-    }
-
 .calculator-container {
   margin-top: 20px;
 }
