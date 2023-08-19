@@ -95,6 +95,10 @@
   transform: rotateY(180deg);
 }
 
+    .calculator.dnd.hidden {
+  display: none;
+}
+
     .image-container2 {
       display: flex;
       flex-wrap: wrap;
