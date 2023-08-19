@@ -88,6 +88,47 @@ input[type="text"] {
   object-fit: cover; 
 }
 
+.skills-checklist {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.skills-category {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills-category h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.skills-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-category li {
+  margin: 5px 0;
+  color: #666;
+}
+
+.skills-category li::before {
+  content: "✓ ";
+  color: #66bb6a;
+}
+
 .calculator-container {
   perspective: 1000px;
   display: flex; 
