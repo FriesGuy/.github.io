@@ -105,10 +105,15 @@ input[type="text"] {
 
 .calculator.regular {
   transform: rotateY(0deg);
+  width: 300px; /* Add this line to match the size */
+  height: 400px; /* Add this line to match the size */
 }
 
 .calculator.dnd {
   transform: rotateY(180deg);
+  width: 300px; /* Already set for DND calculator */
+  background-color: #3d2725;
+  color: white;
 }
 
 .flip-button {
