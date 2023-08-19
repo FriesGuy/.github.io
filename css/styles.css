@@ -90,6 +90,9 @@ input[type="text"] {
 
 .calculator-container {
   perspective: 1000px;
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px;
 }
 
 .calculator {
@@ -105,13 +108,13 @@ input[type="text"] {
 
 .calculator.regular {
   transform: rotateY(0deg);
-  width: 300px; /* Add this line to match the size */
-  height: 400px; /* Add this line to match the size */
+  width: 300px; 
+  height: 400px; 
 }
 
 .calculator.dnd {
   transform: rotateY(180deg);
-  width: 300px; /* Already set for DND calculator */
+  width: 300px; 
   background-color: #3d2725;
   color: white;
 }
