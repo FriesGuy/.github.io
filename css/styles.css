@@ -69,23 +69,23 @@ input[type="text"] {
   padding: 20px 30px;
   font-size: 24px;
   font-weight: bold;
-  border: 2px solid darkgray; 
+  border: 2px solid darkgray;
   border-radius: 5px;
 }
 
 .round-image {
-  width: 150px; 
-  height: 150px; 
-  border-radius: 50%; 
-  overflow: hidden; 
-  margin: 20px auto; 
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto;
   background-color: transparent;
 }
 
 .round-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .skills-checklist {
@@ -136,8 +136,8 @@ input[type="text"] {
 
 .calculator-container {
   perspective: 1000px;
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
 }
 
@@ -154,13 +154,13 @@ input[type="text"] {
 
 .calculator.regular {
   transform: rotateY(0deg);
-  width: 300px; 
-  height: 400px; 
+  width: 300px;
+  height: 400px;
 }
 
 .calculator.dnd {
   transform: rotateY(180deg);
-  width: 300px; 
+  width: 300px;
   background-color: #3d2725;
   color: white;
 }
