@@ -89,6 +89,26 @@
       transform: rotateY(180deg);
     }
 
+.calculator-container {
+  margin-top: 20px;
+}
+
+.calculator {
+  width: 300px;
+  height: 400px;
+  background-color: #f2f2f2;
+  border: 2px solid #333;
+  padding: 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  transform: translateY(0); 
+}
+
+.calculator.dnd {
+  transform: translateY(40px);
+
     .image-container2 {
       display: flex;
       flex-wrap: wrap;
