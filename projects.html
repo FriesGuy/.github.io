@@ -27,6 +27,8 @@
       </p>
     </div>
 
+     <div class="calculator-container">
+  <div class="calculator regular">
     <table id="calculator">
       <tr>
         <td colspan="3">
@@ -34,7 +36,6 @@
         </td>
         <td><input type="button" value="c" /></td>
       </tr>
-
       <tr>
         <td><input type="button" value="1" /></td>
         <td><input type="button" value="2" /></td>
@@ -60,7 +61,58 @@
         <td><input type="button" value="+" /></td>
       </tr>
     </table>
+    <button class="flip-button">Switch to DND Calculator</button>
+  </div>
+  <div class="calculator dnd">
+    <table>
+      <tr>
+        <td colspan="3">
+          <input type="text" id="result" />
+        </td>
+        <td><input type="button" value="c" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="d4" /></td>
+        <td><input type="button" value="d6" /></td>
+        <td><input type="button" value="d8" /></td>
+        <td><input type="button" value="d10" /></td>
+      <tr>
+        <td><input type="button" value="d12" /></td>
+        <td><input type="button" value="d20" /></td>
+        <td><input type="button" value="d100" /></td>
+        <td><input type="button" value="dx" /></td>
+      <tr>
+        <td><input type="button" value="1" /></td>
+        <td><input type="button" value="2" /></td>
+        <td><input type="button" value="3" /></td>
+        <td><input type="button" value="/" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="4" /></td>
+        <td><input type="button" value="5" /></td>
+        <td><input type="button" value="6" /></td>
+        <td><input type="button" value="*" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="7" /></td>
+        <td><input type="button" value="8" /></td>
+        <td><input type="button" value="9" /></td>
+        <td><input type="button" value="-" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="0" /></td>
+        <td><input type="button" value="." /></td>
+        <td><input type="button" value="=" /></td>
+        <td><input type="button" value="+" /></td>
+      </tr>
+    </table>
+
+    <button class="flip-button">Switch to Regular Calculator</button>
+  </div>
+</div>
+    
 <br><br><br>
+    
     <p>
       Here is a study case I did a while back. I did this study case about
       Airbnb rentals in Amsterdam. This page isn't loading, so I'll figure that
