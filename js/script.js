@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (value === "c") {
         clearCalculator();
       } else if (value === "=") {
-        if (prevInput !== "" && operator !== "") {
+        if (operator !== "" && prevInput !== "") {
           currentInput = calculate(prevInput, currentInput, operator);
           resultInput.value = currentInput;
           prevInput = currentInput;
           operator = "";
         }
-      } else if (value === "+" || value === "-" || value === "*" || value === "/") {
+      } else if (["+", "-", "*", "/"].includes(value)) {
         if (currentInput !== "") {
           if (prevInput === "") {
             prevInput = currentInput;
@@ -63,50 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-const flipButtons = document.querySelectorAll(".flip-button");
-flipButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const calculatorContainer = button.closest(".calculator-container");
-    calculatorContainer.classList.toggle("flip");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const resultInput = document.getElementById("result");
-  const buttons = document.querySelectorAll("#calculator input[type='button']");
-  let currentInput = "";
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const value = button.value;
-
-      if (value === "c") {
-        clearCalculator();
-      } else if (value === "=") {
-        try {
-          currentInput = evaluateExpression(currentInput);
-          resultInput.value = currentInput;
-        } catch (error) {
-          resultInput.value = "Error";
-        }
-      } else {
-        currentInput += value;
-        resultInput.value = currentInput;
-      }
+  const flipButtons = document.querySelectorAll(".flip-button");
+  flipButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const calculatorContainer = button.closest(".calculator-container");
+      calculatorContainer.classList.toggle("flip");
     });
   });
-
-  function clearCalculator() {
-    currentInput = "";
-    resultInput.value = currentInput;
-  }
-
-  function evaluateExpression(expression) {
-    expression = expression.replace(/x/g, "*").replace(/÷/g, "/");
-
-    const parsedExpression = math.parse(expression);
-    const evaluatedResult = parsedExpression.evaluate();
-    
-    return evaluatedResult.toString();
-  }
 });
