@@ -71,14 +71,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
- document.addEventListener("DOMContentLoaded", function () {
-  const flipButton = document.querySelector(".flip-button");
-  const regularCalculator = document.querySelector(".calculator.regular");
-  const dndCalculator = document.querySelector(".calculator.dnd");
-
-  flipButton.addEventListener("click", () => {
-    regularCalculator.classList.toggle("hidden");
-    dndCalculator.classList.toggle("hidden");
-  });
-});
