@@ -135,10 +135,22 @@ input[type="text"] {
 }
 
 .calculator-container {
-  perspective: 1000px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; 
+  align-items: center; 
+  perspective: 1000px;
   margin-top: 20px;
+}
+
+.calculator {
+  width: 300px;
+  height: 400px;
+  background-color: #f2f2f2;
+  border: 2px solid #333;
+  padding: 10px;
+  position: relative; 
+  box-sizing: border-box; 
+  transition: transform 0.5s;
 }
 
 .calculator {
