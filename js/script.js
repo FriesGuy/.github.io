@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const resultInput = document.getElementById("result");
+  const resultInputs = document.querySelectorAll(".result");
   const buttons = document.querySelectorAll("#calculator input[type='button']");
   let currentInput = "";
   let prevInput = "";
