@@ -129,6 +129,11 @@ input[type="text"] {
   color: #66bb6a;
 }
 
+.skills-category .unfinished::before {
+  content: "* ";
+  color: #ff9800;
+}
+
 .calculator-container {
   perspective: 1000px;
   display: flex; 
