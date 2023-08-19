@@ -79,6 +79,7 @@ input[type="text"] {
   border-radius: 50%; 
   overflow: hidden; 
   margin: 20px auto; 
+  background-color: transparent;
 }
 
 .round-image img {
