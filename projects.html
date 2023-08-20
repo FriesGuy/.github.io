@@ -146,7 +146,7 @@
   const regularCalculator = document.querySelector(".calculator.regular");
   const dndCalculator = document.querySelector(".calculator.dnd");
 
-  dndCalculator.classList.add("hidden");
+  regularCalculator.classList.remove("hidden");
 
   flipButton.addEventListener("click", () => {
     regularCalculator.classList.toggle("hidden");
