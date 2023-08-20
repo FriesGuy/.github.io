@@ -1,79 +1,104 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Calculator functionality
-  const resultInputs = document.querySelectorAll(".result");
-  const buttons = document.querySelectorAll("#calculator input[type='button']");
-  let currentInput = "";
-  let prevInput = "";
-  let operator = "";
+  // Regular Calculator functionality
+  const regularResultInput = document.querySelector(".calculator.regular .result");
+  const regularButtons = document.querySelectorAll(".calculator.regular input[type='button']");
+  let regularCurrentInput = "";
+  let regularPrevInput = "";
+  let regularOperator = "";
 
-  buttons.forEach((button) => {
+  regularButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const value = button.value;
 
       if (value === "c") {
-        clearCalculator();
+        clearRegularCalculator();
       } else if (value === "=") {
-        performCalculation();
+        performRegularCalculation();
       } else if (["+", "-", "*", "/"].includes(value)) {
-        handleOperatorClick(value);
+        handleRegularOperatorClick(value);
       } else {
-        appendToInput(value);
+        appendToRegularInput(value);
       }
     });
   });
 
-  function clearCalculator() {
-    currentInput = "";
-    prevInput = "";
-    operator = "";
-    resultInputs.forEach(input => input.value = currentInput);
+  function clearRegularCalculator() {
+    regularCurrentInput = "";
+    regularPrevInput = "";
+    regularOperator = "";
+    regularResultInput.value = regularCurrentInput;
   }
 
-  function performCalculation() {
-    if (operator !== "" && prevInput !== "") {
-      currentInput = calculate(prevInput, currentInput, operator);
-      resultInputs.forEach(input => input.value = currentInput);
-      prevInput = currentInput;
-      operator = "";
+  function performRegularCalculation() {
+    if (regularOperator !== "" && regularPrevInput !== "") {
+      regularCurrentInput = calculate(regularPrevInput, regularCurrentInput, regularOperator);
+      regularResultInput.value = regularCurrentInput;
+      regularPrevInput = regularCurrentInput;
+      regularOperator = "";
     }
   }
 
-  function handleOperatorClick(value) {
-    if (currentInput !== "") {
-      if (prevInput === "") {
-        prevInput = currentInput;
-        operator = value;
-        currentInput = "";
+  function handleRegularOperatorClick(value) {
+    if (regularCurrentInput !== "") {
+      if (regularPrevInput === "") {
+        regularPrevInput = regularCurrentInput;
+        regularOperator = value;
+        regularCurrentInput = "";
       } else {
-        prevInput = calculate(prevInput, currentInput, operator);
-        resultInputs.forEach(input => input.value = prevInput);
-        currentInput = "";
-        operator = value;
+        regularPrevInput = calculate(regularPrevInput, regularCurrentInput, regularOperator);
+        regularResultInput.value = regularPrevInput;
+        regularCurrentInput = "";
+        regularOperator = value;
       }
     }
   }
 
-  function appendToInput(value) {
-    currentInput += value;
-    resultInputs.forEach(input => input.value = currentInput);
+  function appendToRegularInput(value) {
+    regularCurrentInput += value;
+    regularResultInput.value = regularCurrentInput;
   }
 
-  function calculate(num1, num2, op) {
-    num1 = parseFloat(num1);
-    num2 = parseFloat(num2);
+  // DND Calculator functionality
+  const dndResultInput = document.querySelector(".calculator.dnd .result");
+  const dndButtons = document.querySelectorAll(".calculator.dnd input[type='button']");
+  let dndCurrentInput = "";
+  let dndPrevInput = "";
+  let dndOperator = "";
 
-    switch (op) {
-      case "+":
-        return num1 + num2;
-      case "-":
-        return num1 - num2;
-      case "*":
-        return num1 * num2;
-      case "/":
-        return num1 / num2;
-      default:
-        return num2;
-    }
+  dndButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const value = button.value;
+
+      if (value === "c") {
+        clearDNDCalculator();
+      } else if (value === "=") {
+        performDNDCalculation();
+      } else if (["d4", "d6", "d8", "d10", "d12", "d20", "d100", "dx"].includes(value)) {
+        handleDNDOperatorClick(value);
+      } else {
+        appendToDNDInput(value);
+      }
+    });
+  });
+
+  function clearDNDCalculator() {
+    dndCurrentInput = "";
+    dndPrevInput = "";
+    dndOperator = "";
+    dndResultInput.value = dndCurrentInput;
+  }
+
+  function performDNDCalculation() {
+    // DND calculator d# 
+  }
+
+  function handleDNDOperatorClick(value) {
+    // DND calculator operator
+  }
+
+  function appendToDNDInput(value) {
+    dndCurrentInput += value;
+    dndResultInput.value = dndCurrentInput;
   }
 
   // Calculator flip buttons
@@ -84,4 +109,5 @@ document.addEventListener("DOMContentLoaded", function () {
       calculatorContainer.classList.toggle("flip");
     });
   });
+  
 });
