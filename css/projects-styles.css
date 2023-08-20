@@ -70,6 +70,10 @@
   background-color: #895c4d;
 }
 
+.calculator.regular.hidden {
+  display: none;
+}
+
 .calculator.dnd.hidden {
   display: none;
 }
