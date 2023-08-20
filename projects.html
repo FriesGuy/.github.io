@@ -66,7 +66,7 @@
         <button class="flip-button">Switch to DND Calculator</button>
     </div>
       
-    <div class="calculator dnd hidden">
+    <div class="calculator dnd">
         <table>
           <tr>
             <td colspan="3">
@@ -146,14 +146,11 @@
   const regularCalculator = document.querySelector(".calculator.regular");
   const dndCalculator = document.querySelector(".calculator.dnd");
 
+  dndCalculator.classList.add("hidden");
+
   flipButton.addEventListener("click", () => {
-    if (regularCalculator.classList.contains("hidden")) {
-      regularCalculator.classList.add("hidden");
-      dndCalculator.classList.remove("hidden");
-    } else {
-      regularCalculator.classList.remove("hidden");
-      dndCalculator.classList.add("hidden");
-    }
+    regularCalculator.classList.toggle("hidden");
+    dndCalculator.classList.toggle("hidden");
   });
 });
 </script>
