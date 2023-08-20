@@ -95,5 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
     dndResultInput.value = dndCurrentInput;
   }
 
-  
+  // Calculator flip buttons
+  const flipButtons = document.querySelectorAll(".flip-button");
+  flipButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const calculatorContainer = button.closest(".calculator-container");
+      calculatorContainer.classList.toggle("flip");
+    });
+  });
 });
+
