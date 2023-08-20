@@ -84,10 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     dndResultInput.value = dndCurrentInput;
   }
 
-  function performDNDCalculation() {
-    // This function is not needed for the DND calculator
-  }
-
   function handleDNDOperatorClick(value) {
     const sides = parseInt(value.slice(1));
     const result = Math.floor(Math.random() * sides) + 1;
@@ -99,14 +95,5 @@ document.addEventListener("DOMContentLoaded", function () {
     dndResultInput.value = dndCurrentInput;
   }
 
-  // Calculator flip buttons
-  const flipButtons = document.querySelectorAll(".flip-button");
-  flipButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const calculatorContainer = button.closest(".calculator-container");
-      calculatorContainer.classList.toggle("flip");
-    });
-  });
-
-  // ... rest of your code ...
+  
 });
