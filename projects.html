@@ -6,6 +6,7 @@
   <title>Xavier's Portfolio</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link rel="stylesheet" type="text/css" href="css/projects-styles.css" />
+  <script src="js/calculator.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.3.0/math.min.js"></script>
 </head>
 <body>
@@ -24,8 +25,94 @@
       <h2>Xavier's Projects</h2>
       <p>
         This was a basic calculator. Now im in the middle of making it flip and
-        become a dnd calc. this has given me some trouble so im in the middle of restarting.
+        become a dnd calc
       </p>
+    </div>
+
+    <div class="calculator-container">
+      <div class="calculator regular">
+        <table id="calculator">
+          <tr>
+            <td colspan="3">
+              <input type="text" class="result" />
+            </td>
+            <td><input type="button" value="c" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="1" /></td>
+            <td><input type="button" value="2" /></td>
+            <td><input type="button" value="3" /></td>
+            <td><input type="button" value="/" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="4" /></td>
+            <td><input type="button" value="5" /></td>
+            <td><input type="button" value="6" /></td>
+            <td><input type="button" value="*" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="7" /></td>
+            <td><input type="button" value="8" /></td>
+            <td><input type="button" value="9" /></td>
+            <td><input type="button" value="-" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="0" /></td>
+            <td><input type="button" value="." /></td>
+            <td><input type="button" value="=" /></td>
+            <td><input type="button" value="+" /></td>
+          </tr>
+        </table>
+        <button class="flip-button">Switch to DND Calculator</button>
+    </div>
+      
+    <div class="calculator dnd hidden">
+        <table>
+          <tr>
+            <td colspan="3">
+              <input type="text" class="result" />
+            </td>
+            <td><input type="button" value="c" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="d4" /></td>
+            <td><input type="button" value="d6" /></td>
+            <td><input type="button" value="d8" /></td>
+            <td><input type="button" value="d10" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="d12" /></td>
+            <td><input type="button" value="d20" /></td>
+            <td><input type="button" value="d100" /></td>
+            <td><input type="button" value="dx" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="1" /></td>
+            <td><input type="button" value="2" /></td>
+            <td><input type="button" value="3" /></td>
+            <td><input type="button" value="/" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="4" /></td>
+            <td><input type="button" value="5" /></td>
+            <td><input type="button" value="6" /></td>
+            <td><input type="button" value="*" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="7" /></td>
+            <td><input type="button" value="8" /></td>
+            <td><input type="button" value="9" /></td>
+            <td><input type="button" value="-" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="0" /></td>
+            <td><input type="button" value="." /></td>
+            <td><input type="button" value="=" /></td>
+            <td><input type="button" value="+" /></td>
+          </tr>
+        </table>
+        <button class="flip-button">Switch to Regular Calculator</button>
+    </div>
     </div>
 
     <br /><br /><br />
@@ -52,5 +139,18 @@
       <p>&copy; Xavier's Portfolio. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const flipButton = document.querySelector(".flip-button");
+    const regularCalculator = document.querySelector(".calculator.regular");
+    const dndCalculator = document.querySelector(".calculator.dnd");
+
+    flipButton.addEventListener("click", () => {
+      regularCalculator.classList.toggle("hidden");
+      dndCalculator.classList.toggle("hidden");
+    });
+  });
+</script>
   </body>
 </html>
