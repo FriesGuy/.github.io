@@ -141,6 +141,11 @@
     <script src="js/script.js"></script>
   
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const flipButton = document.querySelector(".flip-button");
+  const regularCalculator = document.querySelector(".calculator.regular");
+  const dndCalculator = document.querySelector(".calculator.dnd");
+      
   regularCalculator.classList.remove("hidden");
 
   flipButton.addEventListener("click", () => {
