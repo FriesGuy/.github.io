@@ -148,11 +148,11 @@
 
   flipButton.addEventListener("click", () => {
     if (regularCalculator.classList.contains("hidden")) {
-      regularCalculator.classList.remove("hidden");
-      dndCalculator.classList.add("hidden");
-    } else {
       regularCalculator.classList.add("hidden");
       dndCalculator.classList.remove("hidden");
+    } else {
+      regularCalculator.classList.remove("hidden");
+      dndCalculator.classList.add("hidden");
     }
   });
 });
