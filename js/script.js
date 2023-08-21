@@ -1,99 +1,126 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Regular Calculator functionality
-  const regularResultInput = document.querySelector(".calculator.regular .result");
-  const regularButtons = document.querySelectorAll(".calculator.regular input[type='button']");
-  let regularCurrentInput = "";
-  let regularPrevInput = "";
-  let regularOperator = "";
+  const resultInput = document.querySelector(".calculator .result");
+  const buttons = document.querySelectorAll(".calculator input[type='button']");
+  let currentInput = "";
+  let prevInput = "";
+  let operator = "";
 
-  regularButtons.forEach((button) => {
+  buttons.forEach((button) => {
     button.addEventListener("click", function () {
       const value = button.value;
 
       if (value === "c") {
-        clearRegularCalculator();
+        clearCalculator();
       } else if (value === "=") {
-        performRegularCalculation();
+        performCalculation();
       } else if (["+", "-", "*", "/"].includes(value)) {
-        handleRegularOperatorClick(value);
+        handleOperatorClick(value);
+      } else if (value === "sqrt") {
+        performSquareRoot();
+      } else if (value === "^") {
+        handleExponentiation();
+      } else if (["sin", "cos", "tan"].includes(value)) {
+        performTrigFunction(value);
       } else {
-        appendToRegularInput(value);
+        appendToInput(value);
       }
     });
   });
 
-  function clearRegularCalculator() {
-    regularCurrentInput = "";
-    regularPrevInput = "";
-    regularOperator = "";
-    regularResultInput.value = regularCurrentInput;
+  function clearCalculator() {
+    currentInput = "";
+    prevInput = "";
+    operator = "";
+    resultInput.value = currentInput;
   }
 
-  function performRegularCalculation() {
-    if (regularOperator !== "" && regularPrevInput !== "") {
-      regularCurrentInput = calculate(regularPrevInput, regularCurrentInput, regularOperator);
-      regularResultInput.value = regularCurrentInput;
-      regularPrevInput = regularCurrentInput;
-      regularOperator = "";
+  function performCalculation() {
+    if (operator !== "" && prevInput !== "") {
+      currentInput = calculate(prevInput, currentInput, operator);
+      resultInput.value = currentInput;
+      prevInput = currentInput;
+      operator = "";
     }
   }
 
-  function handleRegularOperatorClick(value) {
-    if (regularCurrentInput !== "") {
-      if (regularPrevInput === "") {
-        regularPrevInput = regularCurrentInput;
-        regularOperator = value;
-        regularCurrentInput = "";
+  function handleOperatorClick(value) {
+    if (currentInput !== "") {
+      if (prevInput === "") {
+        prevInput = currentInput;
+        operator = value;
+        currentInput = "";
       } else {
-        regularPrevInput = calculate(regularPrevInput, regularCurrentInput, regularOperator);
-        regularResultInput.value = regularPrevInput;
-        regularCurrentInput = "";
-        regularOperator = value;
+        prevInput = calculate(prevInput, currentInput, operator);
+        resultInput.value = prevInput;
+        currentInput = "";
+        operator = value;
       }
     }
   }
 
-  function appendToRegularInput(value) {
-    regularCurrentInput += value;
-    regularResultInput.value = regularCurrentInput;
+  function performSquareRoot() {
+    if (currentInput !== "") {
+      currentInput = Math.sqrt(parseFloat(currentInput));
+      resultInput.value = currentInput;
+    }
   }
 
-  // DND Calculator functionality
-  const dndResultInput = document.querySelector(".calculator.dnd .result");
-  const dndButtons = document.querySelectorAll(".calculator.dnd input[type='button']");
-  let dndCurrentInput = "";
+  function handleExponentiation() {
+    if (currentInput !== "") {
+      prevInput = currentInput;
+      operator = "^";
+      currentInput = "";
+    }
+  }
 
-  dndButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const value = button.value;
-
-      if (value === "c") {
-        clearDNDCalculator();
-      } else if (value === "=") {
-        performDNDCalculation();
-      } else if (["d4", "d6", "d8", "d10", "d12", "d20", "d100", "dx"].includes(value)) {
-        handleDNDOperatorClick(value);
-      } else {
-        appendToDNDInput(value);
+  function performTrigFunction(func) {
+    if (currentInput !== "") {
+      const angle = parseFloat(currentInput);
+      if (func === "sin") {
+        currentInput = Math.sin(angle);
+      } else if (func === "cos") {
+        currentInput = Math.cos(angle);
+      } else if (func === "tan") {
+        currentInput = Math.tan(angle);
       }
+      resultInput.value = currentInput;
+    }
+  }
+
+  function appendToInput(value) {
+    currentInput += value;
+    resultInput.value = currentInput;
+  }
+
+  function calculate(num1, num2, op) {
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+
+    switch (op) {
+      case "+":
+        return num1 + num2;
+      case "-":
+        return num1 - num2;
+      case "*":
+        return num1 * num2;
+      case "/":
+        return num1 / num2;
+      case "^":
+        return Math.pow(num1, num2);
+      default:
+        return num2;
+    }
+  }
+
+  // Calculator flip buttons
+  const flipButtons = document.querySelectorAll(".flip-button");
+  flipButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const calculatorContainer = button.closest(".calculator-container");
+      calculatorContainer.classList.toggle("flip");
     });
   });
-
-  function clearDNDCalculator() {
-    dndCurrentInput = "";
-    dndResultInput.value = dndCurrentInput;
-  }
-
-  function handleDNDOperatorClick(value) {
-    const sides = parseInt(value.slice(1));
-    const result = Math.floor(Math.random() * sides) + 1;
-    dndResultInput.value = `d${sides} = ${result}`;
-  }
-
-  function appendToDNDInput(value) {
-    dndCurrentInput += value;
-    dndResultInput.value = dndCurrentInput;
-  }
+});
 
   // Calculator flip buttons
   const flipButtons = document.querySelectorAll(".flip-button");
