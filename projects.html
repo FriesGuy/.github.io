@@ -30,40 +30,44 @@
     </div>
 
     <div class="calculator-container">
-      <div class="calculator regular hidden">
-        <table id="calculator">
-          <tr>
-            <td colspan="3">
-              <input type="text" class="result" />
-            </td>
-            <td><input type="button" value="c" /></td>
-          </tr>
-          <tr>
-            <td><input type="button" value="1" /></td>
-            <td><input type="button" value="2" /></td>
-            <td><input type="button" value="3" /></td>
-            <td><input type="button" value="/" /></td>
-          </tr>
-          <tr>
-            <td><input type="button" value="4" /></td>
-            <td><input type="button" value="5" /></td>
-            <td><input type="button" value="6" /></td>
-            <td><input type="button" value="*" /></td>
-          </tr>
-          <tr>
-            <td><input type="button" value="7" /></td>
-            <td><input type="button" value="8" /></td>
-            <td><input type="button" value="9" /></td>
-            <td><input type="button" value="-" /></td>
-          </tr>
-          <tr>
-            <td><input type="button" value="0" /></td>
-            <td><input type="button" value="." /></td>
-            <td><input type="button" value="=" /></td>
-            <td><input type="button" value="+" /></td>
-          </tr>
-        </table>
+    <div class="calculator advanced">
+      <input type="text" class="result" />
+      <table>
+        <tr>
+          <td><input type="button" value="7" /></td>
+          <td><input type="button" value="8" /></td>
+          <td><input type="button" value="9" /></td>
+          <td><input type="button" value="/" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="4" /></td>
+          <td><input type="button" value="5" /></td>
+          <td><input type="button" value="6" /></td>
+          <td><input type="button" value="*" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="1" /></td>
+          <td><input type="button" value="2" /></td>
+          <td><input type="button" value="3" /></td>
+          <td><input type="button" value="-" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="0" /></td>
+          <td><input type="button" value="." /></td>
+          <td><input type="button" value="=" /></td>
+          <td><input type="button" value="+" /></td>
+        </tr>
+      </table>
+      <div class="advanced-buttons">
+        <button value="sqrt">√</button>
+        <button value="pow">x^y</button>
+        <button value="log">log</button>
+        <button value="sin">sin</button>
+        <button value="cos">cos</button>
+        <button value="tan">tan</button>
         <button class="flip-button">Switch to DND Calculator</button>
+      </div>
+    </div>
     </div>
       
     <div class="calculator dnd hidden">
