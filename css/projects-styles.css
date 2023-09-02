@@ -60,45 +60,8 @@
   background-color: #895c4d;
 }
 
-.calculator.regular.hidden {
-  display: none;
-}
-
-.calculator.dnd.hidden {
-  display: none;
-}
-
-.calculator .advanced-buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  margin-top: 10px;
-}
-
-.calculator .advanced-buttons button {
-  background-color: #6b463e;
-  color: #fff;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.calculator .advanced-buttons button:hover {
-  background-color: #895c4d;
-}
-
 .calculator input[type="button"]:hover {
   background-color: #895c4d;
-}
-
-.calculator.regular.hidden {
-  display: none;
-}
-
-.calculator.dnd.hidden {
-  display: none;
 }
 
 .image-container2 {
