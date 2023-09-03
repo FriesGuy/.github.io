@@ -8,10 +8,6 @@
   transition: transform 0.5s;
 }
 
-.calculator-container.flipped {
-  transform: rotateY(180deg);
-}
-
 .calculator {
   width: 300px;
   height: 400px;
